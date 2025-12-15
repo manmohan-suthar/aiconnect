@@ -1,26 +1,14 @@
-import React from "react";
-import Particles from "./components/Particles";
+import React from "react"
+import { Routes, Route } from "react-router-dom"
+import Home from "./Home.jsx"
+import AuthPage from "./pages/auth/AuthPage.jsx"
 
 const App = () => {
   return (
+    <Routes>
+      <Route path="/" element={<AuthPage/>} />
+    </Routes>
+  )
+}
 
-    <div className="bg-black flex items-center justify-center min-h-screen">
-
-<div style={{ width: '100%', height: '600px', position: 'relative' }}>
-  <Particles
-    particleColors={['#ffffff', '#ffffff']}
-    particleCount={500}
-    particleSpread={10}
-    speed={0.3}
-    particleBaseSize={100}
-    moveParticlesOnHover={true}
-    alphaParticles={false}
-    disableRotation={false}
-  />
-</div>
-    </div>
-
-  );
-};
-
-export default App;
+export default App
